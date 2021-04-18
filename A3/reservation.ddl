@@ -13,7 +13,7 @@ CREATE TABLE Skipper(
     sName text NOT NULL, 
     -- add a constraint name for debugging meaningful errors
     rating integer CONSTRAINT ratingRange check(rating in (0,1,2,3,4,5)),
-    age integer NOT NULL
+    age integer NOT NULL check age > 0
 );
 
 -- Relation to represent the craft which was decomposed into R2' from Reservation
